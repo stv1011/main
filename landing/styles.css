@@ -433,6 +433,11 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   border-radius: 50%; background: var(--terra);
 }
 .plan .btn { margin-top: auto; }
+.road-note {
+  margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--paper-3);
+  font-size: 15px; color: var(--text-muted);
+}
+.road-note strong { color: var(--ink); font-weight: 700; }
 .plan-note {
   margin-top: 30px; font-size: 14.4px; color: var(--text-muted); line-height: 1.85;
   padding: 22px 26px; background: var(--paper-2); border-radius: var(--radius);
