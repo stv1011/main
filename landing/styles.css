@@ -420,10 +420,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .footer-brand { display: flex; gap: 18px; align-items: flex-start; max-width: 720px; margin-bottom: 40px; }
 .footer-brand img { width: 44px; height: 44px; border-radius: 12px; flex: 0 0 auto; }
 .footer-brand strong { color: var(--paper); font-weight: 800; }
-.footer-brands { display: flex; flex-wrap: wrap; gap: 34px; padding-bottom: 32px; border-bottom: 1px solid rgba(244, 245, 241, 0.12); }
-.footer-brands dt { font-size: 12.5px; letter-spacing: 0.06em; color: rgba(244, 245, 241, 0.42); margin-bottom: 6px; }
-.footer-brands dd { color: var(--paper); font-weight: 700; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 24px; padding: 28px 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; padding: 28px 0; border-top: 1px solid rgba(244, 245, 241, 0.12); }
 .footer-links a { font-weight: 600; transition: color 0.2s; }
 .footer-links a:hover { color: var(--paper); }
 .footer-legal { font-size: 13.6px; color: rgba(244, 245, 241, 0.42); }
@@ -495,7 +492,6 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .float-card-b { right: -6px; bottom: 30%; }
   .float-card strong { font-size: 12.5px; }
   .loop-foot { padding: 22px 24px; }
-  .footer-brands { gap: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
