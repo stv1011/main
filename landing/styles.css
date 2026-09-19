@@ -506,3 +506,165 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   쇼타쌤 소개 페이지 (teacher.html)
+   ========================================================= */
+
+/* ── 프로필 히어로 ───────────────────────────────────── */
+.profile-hero {
+  position: relative; background: var(--ink); color: var(--paper);
+  padding: calc(var(--header-h) + 66px) 0 84px; overflow: hidden;
+}
+.profile-hero::before {
+  content: ""; position: absolute; inset: -30% -20% auto -10%; height: 130%;
+  background: radial-gradient(45% 45% at 28% 42%, rgba(171, 97, 45, 0.3), transparent 70%);
+  pointer-events: none;
+}
+.profile-hero-inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 0.78fr 1.22fr; gap: clamp(34px, 5vw, 70px); align-items: center;
+}
+.profile-photo { position: relative; }
+.profile-photo::before {
+  content: ""; position: absolute; inset: 20px -16px -18px 22px;
+  border: 2px solid rgba(201, 132, 63, 0.5); border-radius: var(--radius-lg);
+}
+.profile-photo img {
+  position: relative; border-radius: var(--radius-lg);
+  filter: grayscale(1) contrast(1.05); box-shadow: var(--shadow-lg);
+}
+.profile-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 22px; }
+.profile-tagline {
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem); line-height: 1.8; color: var(--text-on-dark);
+  padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid rgba(244, 245, 241, 0.16);
+}
+.profile-tagline strong { color: #E9B888; font-weight: 700; }
+
+.profile-facts { display: grid; gap: 14px; margin-bottom: 32px; }
+.profile-facts li { display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: baseline; }
+.profile-facts span {
+  font-size: 12.5px; font-weight: 800; letter-spacing: 0.04em; color: var(--terra-soft);
+}
+.profile-facts p { color: var(--text-on-dark); font-size: 15.8px; }
+
+.profile-sns { display: flex; flex-wrap: wrap; gap: 10px; }
+.sns-btn {
+  display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; border-radius: 999px;
+  border: 1.5px solid rgba(244, 245, 241, 0.3); font-size: 15px; font-weight: 700; color: var(--paper);
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s var(--ease);
+}
+.sns-btn:hover { background: rgba(244, 245, 241, 0.1); border-color: rgba(244, 245, 241, 0.65); transform: translateY(-2px); }
+.sns-btn svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; }
+
+/* ── 인물 소개 본문 ──────────────────────────────────── */
+.bio-body { display: grid; gap: 20px; }
+.bio-body p { font-size: clamp(1rem, 1.4vw, 1.08rem); color: var(--text-muted); line-height: 1.95; }
+.bio-body blockquote {
+  margin: 14px 0 0; padding: 26px 30px; border-left: 4px solid var(--terra);
+  background: var(--paper-2); border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem); font-weight: 700; line-height: 1.7; color: var(--ink);
+}
+
+/* ── 학력 · 경력 ─────────────────────────────────────── */
+.profile-career { background: var(--paper-2); }
+.career-block { margin-bottom: 52px; }
+.career-block:last-child { margin-bottom: 0; }
+.career-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.career-sub {
+  display: flex; align-items: center; gap: 10px; font-size: 1.02rem; font-weight: 700;
+  margin-bottom: 16px; color: var(--ink);
+}
+
+.edu-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.edu-row li {
+  background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--terra);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 24px 26px;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.edu-row li:last-child { border-left-color: var(--green); }
+.edu-row li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.edu-row h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.edu-row p { color: var(--text-muted); font-size: 15.2px; }
+
+.career-label {
+  font-size: 12.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--terra-text);
+  margin: 0 0 12px;
+}
+.career-list { display: grid; gap: 9px; margin-bottom: 30px; }
+.career-list:last-child { margin-bottom: 0; }
+.career-list li {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  padding: 15px 20px; font-size: 15.6px; color: var(--text-muted);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.career-list li:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
+.career-list strong { color: var(--ink); font-weight: 700; }
+
+/* ── 저서 ────────────────────────────────────────────── */
+.book-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.book-grid li {
+  background: var(--paper-2); border-radius: var(--radius); padding: 26px 24px;
+  border-top: 3px solid var(--terra); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.book-grid li:nth-child(3n+2) { border-top-color: var(--green); }
+.book-grid li:nth-child(3n) { border-top-color: var(--ink); }
+.book-grid li:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.book-tag {
+  display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em;
+  color: var(--terra-text); margin-bottom: 10px;
+}
+.book-grid h3 { font-size: 1.05rem; line-height: 1.55; }
+.book-more { display: flex; flex-direction: column; justify-content: center; background: var(--paper); border: 1px dashed var(--paper-3); }
+.book-more p { color: var(--text-muted); font-size: 14.8px; margin-top: 6px; }
+
+/* ── 링크 모음 ───────────────────────────────────────── */
+.profile-links { background: var(--paper-2); }
+.link-list { display: grid; gap: 12px; }
+.link-list a {
+  display: flex; align-items: center; gap: 18px; padding: 20px 24px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
+}
+.link-list a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: rgba(171, 97, 45, 0.5); }
+.link-icon { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; }
+.link-icon svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.icon-red { background: rgba(196, 48, 43, 0.12); color: #B8352F; }
+.link-text { display: flex; flex-direction: column; line-height: 1.45; margin-right: auto; }
+.link-text strong { font-size: 1.04rem; font-weight: 700; }
+.link-text em { font-style: normal; font-size: 14.2px; color: var(--text-muted); }
+.link-arrow { color: var(--terra); font-size: 19px; transition: transform 0.25s var(--ease); }
+.link-list a:hover .link-arrow { transform: translateX(4px); }
+
+.back-link {
+  margin-top: 22px; font-size: 14.6px; font-weight: 600; color: rgba(244, 245, 241, 0.6);
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--paper); }
+
+/* ── 랜딩 페이지 강사 섹션의 더보기 영역 ─────────────── */
+.teacher-sub {
+  font-size: 15px; color: rgba(244, 245, 241, 0.62); margin: -10px 0 22px; line-height: 1.7;
+}
+.teacher-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
+.teacher-actions .sns-btn { padding: 10px 17px; font-size: 14.5px; }
+
+@media (max-width: 900px) {
+  .profile-hero { padding: calc(var(--header-h) + 40px) 0 62px; }
+  .profile-hero-inner { grid-template-columns: 1fr; gap: 34px; }
+  .profile-photo { max-width: 240px; margin: 0 auto; }
+  .profile-photo::before { inset: 14px -10px -12px 14px; }
+  .profile-hero-inner { gap: 30px; }
+  .career-cols, .edu-row { grid-template-columns: 1fr; gap: 32px; }
+  .edu-row { gap: 14px; }
+  .book-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .book-grid { grid-template-columns: 1fr; }
+  .profile-facts li { grid-template-columns: 54px 1fr; gap: 12px; }
+  .link-list a { padding: 16px 18px; gap: 14px; }
+  .link-icon { width: 40px; height: 40px; border-radius: 12px; }
+  .bio-body blockquote { padding: 22px 24px; }
+  .sns-btn, .teacher-actions .sns-btn { flex: 1 1 auto; justify-content: center; }
+}
