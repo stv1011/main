@@ -27,6 +27,7 @@
   --radius-lg: 26px;
   --header-h: 68px;
   --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
+  --font-hand: "Nanum Pen Script", "Gaegu", "Pretendard Variable", Pretendard, cursive;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
@@ -181,9 +182,32 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   mask-image: radial-gradient(50% 62% at 52% 42%, #000 38%, rgba(0, 0, 0, 0.5) 70%, transparent 97%);
   mix-blend-mode: luminosity;
 }
+/* ── 손글씨 ─────────────────────────────────────────── */
+.hand {
+  font-family: var(--font-hand); font-weight: 400;
+  font-size: 1.32em; letter-spacing: 0.01em; line-height: 1;
+  position: relative; top: 0.06em;
+}
+
+.photo-sign {
+  position: absolute; right: 6%; bottom: 7%; z-index: 2;
+  font-family: var(--font-hand); font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  line-height: 1; color: #F6F3EE; transform: rotate(-5deg);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55), 0 0 2px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.photo-sign::after {
+  content: ""; position: absolute; left: 4%; right: -6%; bottom: -0.16em; height: 2px;
+  background: linear-gradient(to right, transparent, rgba(233, 184, 136, 0.9) 22%, rgba(233, 184, 136, 0.55) 78%, transparent);
+  border-radius: 2px;
+}
+.teacher-photo .photo-sign, .profile-photo .photo-sign { right: 8%; bottom: 5%; }
+
 .float-card {
   position: absolute; margin: 0; padding: 13px 18px; border-radius: 14px;
-  background: rgba(244, 245, 241, 0.96); color: var(--ink);
+  background: rgba(246, 245, 240, 0.72); color: var(--ink);
+  -webkit-backdrop-filter: saturate(150%) blur(10px); backdrop-filter: saturate(150%) blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow: var(--shadow-lg); display: flex; flex-direction: column; line-height: 1.35;
   animation: floaty 6s ease-in-out infinite;
 }
@@ -309,7 +333,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   border: 2px solid rgba(201, 132, 63, 0.5); border-radius: var(--radius-lg);
 }
 .teacher-photo img {
-  position: relative; border-radius: var(--radius-lg); filter: grayscale(1) contrast(1.05);
+  position: relative; z-index: 1; border-radius: var(--radius-lg); filter: grayscale(1) contrast(1.05);
   box-shadow: var(--shadow-lg);
 }
 .teacher h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 22px; }
@@ -487,6 +511,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .section-head { margin-bottom: 38px; }
   .card, .plan { padding: 28px 24px; }
   .step { padding: 20px; gap: 14px; }
+  .photo-sign { font-size: 1.7rem; }
   .float-card { padding: 9px 13px; }
   .float-card-a { left: -6px; top: 12%; }
   .float-card-b { right: -6px; bottom: 30%; }
@@ -527,7 +552,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   border: 2px solid rgba(201, 132, 63, 0.5); border-radius: var(--radius-lg);
 }
 .profile-photo img {
-  position: relative; border-radius: var(--radius-lg);
+  position: relative; z-index: 1; border-radius: var(--radius-lg);
   filter: grayscale(1) contrast(1.05); box-shadow: var(--shadow-lg);
 }
 .profile-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 22px; }
