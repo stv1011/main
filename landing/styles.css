@@ -27,7 +27,7 @@
   --radius-lg: 26px;
   --header-h: 68px;
   --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
-  --font-hand: "Nanum Pen Script", "Gaegu", "Pretendard Variable", Pretendard, cursive;
+  --font-hand: "Nanum Pen Script", "Yomogi", "Gaegu", "Pretendard Variable", Pretendard, cursive;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
@@ -189,32 +189,40 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   position: relative; top: 0.06em;
 }
 
-.photo-sign {
-  position: absolute; right: 6%; bottom: 7%; z-index: 2;
-  font-family: var(--font-hand); font-size: clamp(1.8rem, 2.6vw, 2.5rem);
-  line-height: 1; color: #F6F3EE; transform: rotate(-5deg);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55), 0 0 2px rgba(0, 0, 0, 0.3);
+.photo-caption {
+  position: absolute; right: 6%; bottom: 6%; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+  font-family: var(--font-hand); line-height: 1.3; text-align: right;
+  transform: rotate(-4deg); transform-origin: right bottom;
+  font-size: clamp(1.75rem, 2.4vw, 2.3rem);   /* 서명 기준 크기 */
+  color: #8A9296;                              /* 진한 회색 느낌 */
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
   pointer-events: none;
 }
+.photo-quote { font-size: 0.42em; color: #7E878B; letter-spacing: 0.01em; }
+.photo-sign { position: relative; display: inline-block; font-size: 1em; }
 .photo-sign::after {
-  content: ""; position: absolute; left: 4%; right: -6%; bottom: -0.16em; height: 2px;
-  background: linear-gradient(to right, transparent, rgba(233, 184, 136, 0.9) 22%, rgba(233, 184, 136, 0.55) 78%, transparent);
+  content: ""; position: absolute; left: 4%; right: -6%; bottom: -0.14em; height: 2px;
+  background: linear-gradient(to right, transparent, rgba(160, 168, 170, 0.85) 22%, rgba(160, 168, 170, 0.5) 78%, transparent);
   border-radius: 2px;
 }
-.teacher-photo .photo-sign, .profile-photo .photo-sign { right: 8%; bottom: 5%; }
+.teacher-photo .photo-caption, .profile-photo .photo-caption {
+  right: 7%; bottom: 5%; font-size: clamp(1.5rem, 2vw, 1.95rem);
+}
 
 .float-card {
   position: absolute; margin: 0; padding: 13px 18px; border-radius: 14px;
-  background: rgba(246, 245, 240, 0.72); color: var(--ink);
-  -webkit-backdrop-filter: saturate(150%) blur(10px); backdrop-filter: saturate(150%) blur(10px);
+  background: rgba(246, 245, 240, 0.56); color: var(--ink);
+  -webkit-backdrop-filter: saturate(160%) blur(13px); backdrop-filter: saturate(160%) blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow: var(--shadow-lg); display: flex; flex-direction: column; line-height: 1.35;
-  animation: floaty 6s ease-in-out infinite;
+  max-width: 218px; animation: floaty 6s ease-in-out infinite;
 }
 .float-card strong { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; }
 .float-card span { font-size: 12px; color: var(--terra-text); font-weight: 700; }
 .float-card-a { left: -6px; top: 22%; }
-.float-card-b { right: -4px; bottom: 26%; animation-delay: 1.6s; }
+.float-card-b { right: -4px; bottom: 30%; animation-delay: 1.6s; }
+.float-card-c { left: 2px; bottom: 9%; animation-delay: 3.1s; }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 
 .hero-strip { position: relative; z-index: 1; border-top: 1px solid rgba(244, 245, 241, 0.14); background: rgba(0, 0, 0, 0.14); }
@@ -487,8 +495,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .hero-copy { padding-bottom: 8px; }
   .hero-photo { max-width: 300px; margin: 0 auto; }
   .hero-visual { margin-top: 8px; }
-  .float-card-a { left: 0; top: 16%; }
-  .float-card-b { right: 0; bottom: 22%; }
+  .float-card-a { left: 0; top: 10%; }
+  .float-card-b { right: 0; bottom: 34%; }
+  .float-card-c { left: 0; bottom: 6%; max-width: 186px; }
 
   .cards-3, .road, .plans { grid-template-columns: 1fr; }
   .loop-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -511,7 +520,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .section-head { margin-bottom: 38px; }
   .card, .plan { padding: 28px 24px; }
   .step { padding: 20px; gap: 14px; }
-  .photo-sign { font-size: 1.7rem; }
+  .photo-caption { font-size: 1.55rem; right: 5%; bottom: 5%; }
   .float-card { padding: 9px 13px; }
   .float-card-a { left: -6px; top: 12%; }
   .float-card-b { right: -6px; bottom: 30%; }
@@ -596,8 +605,26 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
 /* ── 저서 (표지 이미지) ─────────────────────────────── */
-.book-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.book-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; align-items: start; }
+.book { grid-column: span 2; }
+.book-series { grid-column: span 6; }
 .book { display: flex; flex-direction: column; }
+.book-stack { display: flex; align-items: flex-end; }
+.book-stack .book-cover { width: 31%; flex: 0 0 auto; }
+.book-stack .book-cover + .book-cover { margin-left: -8%; }
+.book-stack .book-cover[data-label]::after {
+  left: auto; right: 10px; max-width: 64%; text-align: right; font-size: 12.5px;
+}
+.book-stack .book-cover:nth-child(1) { z-index: 4; }
+.book-stack .book-cover:nth-child(2) { z-index: 3; }
+.book-stack .book-cover:nth-child(3) { z-index: 2; }
+.book-stack .book-cover:nth-child(4) { z-index: 1; }
+.book-stack .book-cover:hover { transform: translateY(-10px); z-index: 5; box-shadow: var(--shadow-lg); }
+.book-sub { color: var(--text-muted); font-size: 13.6px; margin-top: 5px; }
+.book-more-note {
+  margin-top: 26px; color: var(--text-muted); font-size: 14.6px;
+  padding-top: 20px; border-top: 1px solid var(--paper-3);
+}
 .book-cover {
   position: relative; aspect-ratio: 3 / 4.15; margin-bottom: 14px;
   border-radius: 3px 9px 9px 3px; overflow: hidden;
@@ -606,8 +633,12 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   display: grid; place-items: center; padding: 14px 12px 14px 20px;
 }
-.book:nth-child(3n+1) .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
-.book:nth-child(3n+2) .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book:nth-child(3n+1) > .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
+.book:nth-child(3n+2) > .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book-stack .book-cover:nth-child(1) { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
+.book-stack .book-cover:nth-child(2) { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book-stack .book-cover:nth-child(3) { background: linear-gradient(145deg, #55707D, var(--ink)); }
+.book-stack .book-cover:nth-child(4) { background: linear-gradient(145deg, #9A6B45, #6E4423); }
 /* 책등 */
 .book-cover::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 9px; z-index: 2;
@@ -615,14 +646,14 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 /* 표지 이미지가 없을 때 보이는 제목 */
 .book-cover[data-label]::after {
-  content: attr(data-label); position: absolute; inset: auto 12px 16px 22px;
-  font-size: 15px; font-weight: 800; line-height: 1.4; letter-spacing: -0.03em;
+  content: attr(data-label); position: absolute; inset: auto 10px 14px 20px;
+  font-size: 13.5px; font-weight: 800; line-height: 1.4; letter-spacing: -0.03em;
   color: rgba(255, 253, 250, 0.96); text-align: left; word-break: keep-all;
 }
 .book-cover img {
   position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; object-fit: cover;
 }
-.book:hover .book-cover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.book:hover > .book-cover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .book-tag {
   display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em;
   color: var(--terra-text); margin-bottom: 5px;
@@ -672,11 +703,14 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .profile-photo { max-width: 240px; margin: 0 auto; }
   .profile-photo::before { inset: 14px -10px -12px 14px; }
   .profile-hero-inner { gap: 30px; }
-  .book-grid { grid-template-columns: repeat(3, 1fr); }
+  .book { grid-column: span 4; }
+  .book-series { grid-column: span 12; }
 }
 
 @media (max-width: 620px) {
-  .book-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .book-grid { gap: 16px; }
+  .book { grid-column: span 6; }
+  .book-series { grid-column: span 12; }
   .profile-facts li { grid-template-columns: 54px 1fr; gap: 12px; }
   .link-list a { padding: 16px 18px; gap: 14px; }
   .link-icon { width: 40px; height: 40px; border-radius: 12px; }

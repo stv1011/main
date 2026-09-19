@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
 <link rel="stylesheet" href="styles.css" />
 </head>
@@ -67,7 +68,10 @@
           <source srcset="assets/shota.webp" type="image/webp" />
           <img src="assets/shota.jpg" alt="쇼타쌤 프로필 사진" width="1000" height="1339" fetchpriority="high" />
         </picture>
-        <span class="photo-sign" aria-hidden="true">쇼타쌤</span>
+        <div class="photo-caption">
+            <span class="photo-quote">継続は力なり。<br />꾸준함은 힘이 된다.</span>
+            <span class="photo-sign" aria-hidden="true">쇼타쌤</span>
+          </div>
       </div>
 
       <div class="profile-intro">
@@ -143,12 +147,24 @@
       </header>
 
       <ul class="book-grid">
-        <li class="book reveal">
-          <div class="book-cover" data-label="JLPT N3">
-            <img src="assets/books/jlpt-n3.jpg" alt="이번에 제대로 합격 JLPT N3 표지" loading="lazy" />
+        <li class="book book-series reveal">
+          <div class="book-stack">
+            <div class="book-cover" data-label="JLPT N3">
+              <img src="assets/books/jlpt-n3.jpg" alt="이번에 제대로 합격 JLPT N3 표지" loading="lazy" />
+            </div>
+            <div class="book-cover" data-label="모의고사 N3">
+              <img src="assets/books/jlpt-mock-n3.jpg" alt="이번에 제대로 합격 JLPT 실전모의고사 N3 표지" loading="lazy" />
+            </div>
+            <div class="book-cover" data-label="모의고사 N2">
+              <img src="assets/books/jlpt-mock-n2.jpg" alt="이번에 제대로 합격 JLPT 실전모의고사 N2 표지" loading="lazy" />
+            </div>
+            <div class="book-cover" data-label="모의고사 N1">
+              <img src="assets/books/jlpt-mock-n1.jpg" alt="이번에 제대로 합격 JLPT 실전모의고사 N1 표지" loading="lazy" />
+            </div>
           </div>
           <span class="book-tag">JLPT</span>
-          <h3>이번에 제대로 합격 JLPT N3</h3>
+          <h3>이번에 제대로 합격 JLPT 시리즈</h3>
+          <p class="book-sub">N3 교재 · 실전모의고사 N3 · N2 · N1</p>
         </li>
         <li class="book reveal">
           <div class="book-cover" data-label="쇼츠 일본어">
@@ -156,13 +172,6 @@
           </div>
           <span class="book-tag">회화</span>
           <h3>80개 쇼츠로 배우는 쇼츠 일본어 초급회화</h3>
-        </li>
-        <li class="book reveal">
-          <div class="book-cover" data-label="실전모의고사">
-            <img src="assets/books/jlpt-mock.jpg" alt="이번에 제대로 합격 JLPT 실전모의고사 시리즈 표지" loading="lazy" />
-          </div>
-          <span class="book-tag">JLPT</span>
-          <h3>이번에 제대로 합격 JLPT 실전모의고사 시리즈</h3>
         </li>
         <li class="book reveal">
           <div class="book-cover" data-label="SJPT">
@@ -178,12 +187,9 @@
           <span class="book-tag">EJU</span>
           <h3>EJU 실전 모의고사 종합과목</h3>
         </li>
-        <li class="book book-more reveal">
-          <div class="book-cover book-cover-more" aria-hidden="true"><span>+</span></div>
-          <h3>그 외 다수</h3>
-          <p>JLPT · EJU · 회화 교재 집필 계속</p>
-        </li>
       </ul>
+
+      <p class="book-more-note reveal">그 외 JLPT · EJU · 회화 교재 다수 집필</p>
     </div>
   </section>
 
