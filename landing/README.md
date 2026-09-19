@@ -50,7 +50,19 @@ python3 -m http.server 8080   # http://localhost:8080
 
 ## 배포
 
-- **Vercel** — 이 저장소를 연결하고 *Root Directory* 를 `landing` 으로 지정하면 됩니다. (빌드 명령 없음 / 정적)
+- **Vercel** — 이 저장소를 연결하고 아래 두 가지만 맞추면 됩니다. (빌드 명령 없음 / 정적)
+
+  | 설정 | 값 |
+  | --- | --- |
+  | Root Directory | `landing` |
+  | Production Branch | `main` |
+  | Framework Preset | Other (빌드·출력 설정은 모두 비움) |
+
+  `main` 에 푸시하면 자동으로 프로덕션이 갱신됩니다.
+  푸시했는데 배포가 생성되지 않으면 **Deployments → 오른쪽 위 `⋯` → Create Deployment** 로
+  브랜치를 지정해 수동 배포할 수 있습니다. (웹훅을 거치지 않습니다)
+  프리뷰 배포를 Redeploy 하면 프리뷰로만 다시 올라가므로 프로덕션은 바뀌지 않습니다.
+
 - **GitHub Pages, Netlify, S3** 등 — `landing/` 폴더를 그대로 업로드하면 동작합니다.
 
 ## 배포 전에 채워야 할 항목
