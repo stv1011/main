@@ -1,4 +1,20 @@
 /* =========================================================
+   손글씨 강조 서체 — 온글잎 오케이티콘 (자체 호스팅 · 서브셋)
+   페이지에 쓰이는 글자만 담아 woff2 로 변환했습니다.
+   문구를 크게 바꿀 때는 assets/fonts/README.md 의 재생성 방법을 참고하세요.
+   ========================================================= */
+@font-face {
+  font-family: "Okticon";
+  src: url("assets/fonts/okticon-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Okticon";
+  src: url("assets/fonts/okticon-bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* =========================================================
    익힘 (Ikhim) — 랜딩 페이지 스타일
    팔레트는 브랜드 로고에서 추출: 종이 #F4F5F1 / 테라코타 #AB612D
    / 잉크 #1F323C / 그린 #3F6C53
@@ -28,7 +44,7 @@
   --header-h: 68px;
   --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
   --font-hand: "Nanum Pen Script", "Yomogi", "Gaegu", "Pretendard Variable", Pretendard, cursive;
-  --font-script: "Nanum Brush Script", "Nanum Pen Script", "Yomogi", cursive;
+  --font-script: "Okticon", "Nanum Pen Script", "Yomogi", cursive;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
@@ -185,7 +201,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 /* ── 손글씨 ─────────────────────────────────────────── */
 .script {
-  font-family: var(--font-script); font-weight: 400; letter-spacing: 0.005em;
+  font-family: var(--font-script); font-weight: 700; letter-spacing: 0.005em;
 }
 .hand {
   font-family: var(--font-hand); font-weight: 400;
@@ -327,8 +343,13 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 /* ── 차별점 ──────────────────────────────────────────── */
 .why { background: var(--paper-2); }
 .card-accent h3.script {
-  font-size: clamp(1.5rem, 2.3vw, 1.85rem); line-height: 1.5; margin-bottom: 14px;
+  font-size: clamp(1.32rem, 2vw, 1.58rem); line-height: 1.5; margin-bottom: 12px;
 }
+.card-accent p {
+  font-family: var(--font-script); font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.1rem); line-height: 1.75; letter-spacing: 0;
+}
+.card-accent p strong { font-weight: 700; }
 .card-accent .icon {
   width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 20px;
 }
@@ -353,8 +374,8 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 .teacher h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 22px; }
 .teacher-lead {
-  font-family: var(--font-script); font-weight: 400;
-  font-size: clamp(1.45rem, 2.3vw, 1.9rem); line-height: 1.62; color: #E9B888; padding-bottom: 30px; margin-bottom: 30px;
+  font-family: var(--font-script); font-weight: 700;
+  font-size: clamp(1.3rem, 2vw, 1.62rem); line-height: 1.65; color: #E9B888; padding-bottom: 30px; margin-bottom: 30px;
   border-bottom: 1px solid rgba(244, 245, 241, 0.16);
 }
 .teacher-list { display: grid; gap: 22px; }
@@ -607,8 +628,8 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .bio-body blockquote {
   margin: 14px 0 0; padding: 26px 30px; border-left: 4px solid var(--terra);
   background: var(--paper-2); border-radius: 0 var(--radius) var(--radius) 0;
-  font-family: var(--font-script); font-weight: 400;
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.6; color: var(--ink);
+  font-family: var(--font-script); font-weight: 700;
+  font-size: clamp(1.26rem, 1.9vw, 1.55rem); line-height: 1.65; color: var(--ink);
 }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
