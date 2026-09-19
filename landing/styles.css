@@ -605,7 +605,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
 /* ── 저서 (표지 이미지) ─────────────────────────────── */
-.book-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; align-items: start; }
+.book-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; align-items: start; }
 .book { display: flex; flex-direction: column; }
 .book-feature {
   display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(28px, 4vw, 56px);
@@ -639,9 +639,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   display: grid; place-items: center; padding: 14px 12px 14px 20px;
 }
-.book:nth-child(5n+1) > .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
-.book:nth-child(5n+2) > .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
-.book:nth-child(5n+4) > .book-cover { background: linear-gradient(145deg, #9A6B45, #6E4423); }
+.book:nth-child(4n+1) > .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
+.book:nth-child(4n+2) > .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book:nth-child(4n) > .book-cover { background: linear-gradient(145deg, #9A6B45, #6E4423); }
 .book-stack .book-cover:nth-child(1) { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
 .book-stack .book-cover:nth-child(2) { background: linear-gradient(145deg, #4F7F62, var(--green)); }
 .book-stack .book-cover:nth-child(3) { background: linear-gradient(145deg, #55707D, var(--ink)); }
