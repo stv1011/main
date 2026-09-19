@@ -555,7 +555,14 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   position: relative; z-index: 1; border-radius: var(--radius-lg);
   filter: grayscale(1) contrast(1.05); box-shadow: var(--shadow-lg);
 }
-.profile-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 22px; }
+.profile-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 22px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px;
+}
+.name-en {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem); font-weight: 500; letter-spacing: 0.04em;
+  color: rgba(244, 245, 241, 0.45);
+}
 .profile-tagline {
   font-size: clamp(1.02rem, 1.6vw, 1.2rem); line-height: 1.8; color: var(--text-on-dark);
   padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid rgba(244, 245, 241, 0.16);
@@ -588,56 +595,45 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
-.profile-career { background: var(--paper-2); }
-.career-block { margin-bottom: 52px; }
-.career-block:last-child { margin-bottom: 0; }
-.career-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
-.career-sub {
-  display: flex; align-items: center; gap: 10px; font-size: 1.02rem; font-weight: 700;
-  margin-bottom: 16px; color: var(--ink);
+/* ── 저서 (표지 이미지) ─────────────────────────────── */
+.book-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.book { display: flex; flex-direction: column; }
+.book-cover {
+  position: relative; aspect-ratio: 3 / 4.15; margin-bottom: 14px;
+  border-radius: 3px 9px 9px 3px; overflow: hidden;
+  background: linear-gradient(145deg, var(--ink-3), var(--ink));
+  box-shadow: 0 14px 26px -14px rgba(31, 50, 60, 0.7);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  display: grid; place-items: center; padding: 14px 12px 14px 20px;
 }
-
-.edu-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.edu-row li {
-  background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--terra);
-  border-radius: 0 var(--radius) var(--radius) 0; padding: 24px 26px;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+.book:nth-child(3n+1) .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
+.book:nth-child(3n+2) .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+/* 책등 */
+.book-cover::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 9px; z-index: 2;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.04));
 }
-.edu-row li:last-child { border-left-color: var(--green); }
-.edu-row li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.edu-row h3 { font-size: 1.1rem; margin-bottom: 6px; }
-.edu-row p { color: var(--text-muted); font-size: 15.2px; }
-
-.career-label {
-  font-size: 12.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--terra-text);
-  margin: 0 0 12px;
+/* 표지 이미지가 없을 때 보이는 제목 */
+.book-cover[data-label]::after {
+  content: attr(data-label); position: absolute; inset: auto 12px 16px 22px;
+  font-size: 15px; font-weight: 800; line-height: 1.4; letter-spacing: -0.03em;
+  color: rgba(255, 253, 250, 0.96); text-align: left; word-break: keep-all;
 }
-.career-list { display: grid; gap: 9px; margin-bottom: 30px; }
-.career-list:last-child { margin-bottom: 0; }
-.career-list li {
-  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
-  padding: 15px 20px; font-size: 15.6px; color: var(--text-muted);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+.book-cover img {
+  position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; object-fit: cover;
 }
-.career-list li:hover { transform: translateX(4px); box-shadow: var(--shadow-sm); }
-.career-list strong { color: var(--ink); font-weight: 700; }
-
-/* ── 저서 ────────────────────────────────────────────── */
-.book-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.book-grid li {
-  background: var(--paper-2); border-radius: var(--radius); padding: 26px 24px;
-  border-top: 3px solid var(--terra); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
-}
-.book-grid li:nth-child(3n+2) { border-top-color: var(--green); }
-.book-grid li:nth-child(3n) { border-top-color: var(--ink); }
-.book-grid li:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.book:hover .book-cover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .book-tag {
   display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em;
-  color: var(--terra-text); margin-bottom: 10px;
+  color: var(--terra-text); margin-bottom: 5px;
 }
-.book-grid h3 { font-size: 1.05rem; line-height: 1.55; }
-.book-more { display: flex; flex-direction: column; justify-content: center; background: var(--paper); border: 1px dashed var(--paper-3); }
-.book-more p { color: var(--text-muted); font-size: 14.8px; margin-top: 6px; }
+.book h3 { font-size: 0.95rem; line-height: 1.5; letter-spacing: -0.03em; }
+.book-more .book-cover-more {
+  background: none; border: 1.5px dashed var(--paper-3); box-shadow: none;
+}
+.book-more .book-cover-more span { font-size: 26px; color: var(--text-muted); opacity: 0.6; }
+.book-more .book-cover-more::before { display: none; }
+.book-more p { color: var(--text-muted); font-size: 13.6px; margin-top: 4px; }
 
 /* ── 링크 모음 ───────────────────────────────────────── */
 .profile-links { background: var(--paper-2); }
@@ -676,13 +672,11 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .profile-photo { max-width: 240px; margin: 0 auto; }
   .profile-photo::before { inset: 14px -10px -12px 14px; }
   .profile-hero-inner { gap: 30px; }
-  .career-cols, .edu-row { grid-template-columns: 1fr; gap: 32px; }
-  .edu-row { gap: 14px; }
-  .book-grid { grid-template-columns: 1fr 1fr; }
+  .book-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 620px) {
-  .book-grid { grid-template-columns: 1fr; }
+  .book-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .profile-facts li { grid-template-columns: 54px 1fr; gap: 12px; }
   .link-list a { padding: 16px 18px; gap: 14px; }
   .link-icon { width: 40px; height: 40px; border-radius: 12px; }
