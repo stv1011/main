@@ -28,6 +28,7 @@
   --header-h: 68px;
   --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
   --font-hand: "Nanum Pen Script", "Yomogi", "Gaegu", "Pretendard Variable", Pretendard, cursive;
+  --font-script: "Nanum Brush Script", "Nanum Pen Script", "Yomogi", cursive;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
@@ -183,6 +184,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   mix-blend-mode: luminosity;
 }
 /* ── 손글씨 ─────────────────────────────────────────── */
+.script {
+  font-family: var(--font-script); font-weight: 400; letter-spacing: 0.005em;
+}
 .hand {
   font-family: var(--font-hand); font-weight: 400;
   font-size: 1.32em; letter-spacing: 0.01em; line-height: 1;
@@ -322,6 +326,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 /* ── 차별점 ──────────────────────────────────────────── */
 .why { background: var(--paper-2); }
+.card-accent h3.script {
+  font-size: clamp(1.5rem, 2.3vw, 1.85rem); line-height: 1.5; margin-bottom: 14px;
+}
 .card-accent .icon {
   width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 20px;
 }
@@ -346,8 +353,8 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 .teacher h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 22px; }
 .teacher-lead {
-  font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.75; color: #E9B888;
-  font-weight: 600; padding-bottom: 30px; margin-bottom: 30px;
+  font-family: var(--font-script); font-weight: 400;
+  font-size: clamp(1.45rem, 2.3vw, 1.9rem); line-height: 1.62; color: #E9B888; padding-bottom: 30px; margin-bottom: 30px;
   border-bottom: 1px solid rgba(244, 245, 241, 0.16);
 }
 .teacher-list { display: grid; gap: 22px; }
@@ -600,7 +607,8 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .bio-body blockquote {
   margin: 14px 0 0; padding: 26px 30px; border-left: 4px solid var(--terra);
   background: var(--paper-2); border-radius: 0 var(--radius) var(--radius) 0;
-  font-size: clamp(1.02rem, 1.6vw, 1.18rem); font-weight: 700; line-height: 1.7; color: var(--ink);
+  font-family: var(--font-script); font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.6; color: var(--ink);
 }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
