@@ -17,6 +17,8 @@
 
 | 파일명 | 책 |
 | --- | --- |
+| `ebs-100days.jpg` | EBS 일본어 쇼타 쌤의 100일 커리큘럼 |
+| `news-routine.jpg` | 1일 1뉴스 일본어 끝장 루틴 |
 | `shorts-nihongo.jpg` | 80개 쇼츠로 배우는 쇼츠 일본어 초급회화 |
 | `sjpt.jpg` | SJPT 기출문제집 |
 | `eju.jpg` | EJU 실전 모의고사 종합과목 |

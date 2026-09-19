@@ -605,10 +605,15 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 /* ── 학력 · 경력 ─────────────────────────────────────── */
 /* ── 저서 (표지 이미지) ─────────────────────────────── */
-.book-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; align-items: start; }
-.book { grid-column: span 2; }
-.book-series { grid-column: span 6; }
+.book-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; align-items: start; }
 .book { display: flex; flex-direction: column; }
+.book-feature {
+  display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(28px, 4vw, 56px);
+  align-items: center; padding: 34px 36px; margin-bottom: 34px;
+  background: var(--paper-2); border-radius: var(--radius-lg);
+}
+.book-feature-text h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.45; }
+.book-feature-text .book-sub { font-size: 15.2px; line-height: 1.8; margin-top: 12px; }
 .book-stack { display: flex; align-items: flex-end; }
 .book-stack .book-cover { width: 31%; flex: 0 0 auto; }
 .book-stack .book-cover + .book-cover { margin-left: -8%; }
@@ -621,8 +626,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .book-stack .book-cover:nth-child(4) { z-index: 1; }
 .book-stack .book-cover:hover { transform: translateY(-10px); z-index: 5; box-shadow: var(--shadow-lg); }
 .book-sub { color: var(--text-muted); font-size: 13.6px; margin-top: 5px; }
+.book-feature .book-cover { box-shadow: 0 18px 32px -16px rgba(31, 50, 60, 0.75); }
 .book-more-note {
-  margin-top: 26px; color: var(--text-muted); font-size: 14.6px;
+  margin-top: 28px; color: var(--text-muted); font-size: 14.6px;
   padding-top: 20px; border-top: 1px solid var(--paper-3);
 }
 .book-cover {
@@ -633,8 +639,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   display: grid; place-items: center; padding: 14px 12px 14px 20px;
 }
-.book:nth-child(3n+1) > .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
-.book:nth-child(3n+2) > .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book:nth-child(5n+1) > .book-cover { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
+.book:nth-child(5n+2) > .book-cover { background: linear-gradient(145deg, #4F7F62, var(--green)); }
+.book:nth-child(5n+4) > .book-cover { background: linear-gradient(145deg, #9A6B45, #6E4423); }
 .book-stack .book-cover:nth-child(1) { background: linear-gradient(145deg, #C07440, var(--terra-dark)); }
 .book-stack .book-cover:nth-child(2) { background: linear-gradient(145deg, #4F7F62, var(--green)); }
 .book-stack .book-cover:nth-child(3) { background: linear-gradient(145deg, #55707D, var(--ink)); }
@@ -703,14 +710,13 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .profile-photo { max-width: 240px; margin: 0 auto; }
   .profile-photo::before { inset: 14px -10px -12px 14px; }
   .profile-hero-inner { gap: 30px; }
-  .book { grid-column: span 4; }
-  .book-series { grid-column: span 12; }
+  .book-grid { grid-template-columns: repeat(3, 1fr); }
+  .book-feature { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
 }
 
 @media (max-width: 620px) {
-  .book-grid { gap: 16px; }
-  .book { grid-column: span 6; }
-  .book-series { grid-column: span 12; }
+  .book-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .book-feature { padding: 22px; }
   .profile-facts li { grid-template-columns: 54px 1fr; gap: 12px; }
   .link-list a { padding: 16px 18px; gap: 14px; }
   .link-icon { width: 40px; height: 40px; border-radius: 12px; }
