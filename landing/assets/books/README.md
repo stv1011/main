@@ -22,6 +22,11 @@
 | `sjpt.jpg` | SJPT 기출문제집 |
 | `eju.jpg` | EJU 실전 모의고사 종합과목 |
 
+## 아직 없는 표지
+
+`shorts-nihongo.jpg`, `sjpt.jpg`, `eju.jpg` 세 장이 비어 있습니다.
+넣기 전까지는 브랜드 색상 자리표시 표지가 대신 보입니다.
+
 ## 규격
 
 - 세로형, 가로 600px 내외, 비율 3 : 4.15 (`object-fit: cover`로 잘라 맞춥니다)

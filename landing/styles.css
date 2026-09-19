@@ -632,7 +632,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   padding-top: 20px; border-top: 1px solid var(--paper-3);
 }
 .book-cover {
-  position: relative; aspect-ratio: 3 / 4.15; margin-bottom: 14px;
+  position: relative; aspect-ratio: 3 / 4.1; margin-bottom: 14px;
   border-radius: 3px 9px 9px 3px; overflow: hidden;
   background: linear-gradient(145deg, var(--ink-3), var(--ink));
   box-shadow: 0 14px 26px -14px rgba(31, 50, 60, 0.7);
