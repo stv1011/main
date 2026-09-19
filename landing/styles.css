@@ -618,6 +618,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 }
 .book-feature-text h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.45; }
 .book-feature-text .book-sub { font-size: 15.2px; line-height: 1.8; margin-top: 12px; }
+.book-note { display: block; margin-top: 6px; font-style: normal; color: var(--terra-text); font-size: 14.4px; }
 .book-stack { display: flex; align-items: flex-end; }
 .book-stack .book-cover { width: 31%; flex: 0 0 auto; }
 .book-stack .book-cover + .book-cover { margin-left: -8%; }
