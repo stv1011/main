@@ -119,6 +119,9 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 .hero-visual { display: flex; flex-direction: column; align-items: center; padding-top: 12px; }
 .phone-pair { display: flex; align-items: flex-end; justify-content: center; }
+/* 좌우를 뒤집어 큰 화면이 왼쪽에 오게 한다 */
+.phone-pair-mirror { flex-direction: row-reverse; }
+.phone-pair-mirror .phone-back { margin-right: 0; margin-left: -52px; transform: rotate(4deg) translateY(-10px); }
 .phone-pair .phone-back {
   max-width: 214px; margin-right: -52px; transform: rotate(-4deg) translateY(-10px);
   z-index: 1; opacity: 0.97;
