@@ -90,11 +90,11 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
 /* ── 휴대전화 목업 ───────────────────────────────────── */
 .phone {
-  margin: 0; width: 100%; max-width: 244px; padding: 7px; background: var(--white);
+  margin: 0; width: 100%; max-width: 252px; padding: 7px; background: var(--white);
   border-radius: 30px; box-shadow: var(--shadow-lg), 0 0 0 1px rgba(15, 23, 42, 0.07);
 }
 .phone-screen {
-  position: relative; aspect-ratio: 9 / 18.5; border-radius: 24px; overflow: hidden;
+  position: relative; aspect-ratio: 600 / 1119; border-radius: 24px; overflow: hidden;
   background: linear-gradient(160deg, var(--sky-soft), #F8FCFF 60%, var(--sky-bg));
   display: grid; place-items: center; padding: 18px; text-align: center;
 }
@@ -120,10 +120,10 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .hero-visual { display: flex; flex-direction: column; align-items: center; padding-top: 12px; }
 .phone-pair { display: flex; align-items: flex-end; justify-content: center; }
 .phone-pair .phone-back {
-  max-width: 182px; margin-right: -44px; transform: rotate(-4deg) translateY(-10px);
+  max-width: 214px; margin-right: -52px; transform: rotate(-4deg) translateY(-10px);
   z-index: 1; opacity: 0.97;
 }
-.phone-pair .phone-front { max-width: 216px; position: relative; z-index: 2; }
+.phone-pair .phone-front { max-width: 256px; position: relative; z-index: 2; }
 .hero-flow {
   margin-top: 26px; font-size: 14.5px; font-weight: 700; color: var(--blue);
   background: var(--sky-soft); padding: 10px 20px; border-radius: 999px;
@@ -177,7 +177,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .how { background: var(--sky-bg); }
 .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .flow li { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.flow .phone { max-width: 210px; margin-bottom: 22px; }
+.flow .phone { max-width: 250px; margin-bottom: 22px; }
 .step-num {
   font-size: 12.5px; font-weight: 800; letter-spacing: 0.1em; color: #fff; background: var(--blue);
   padding: 4px 12px; border-radius: 999px; margin-bottom: 12px;
@@ -197,7 +197,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .situation-list p { font-size: 14.8px; color: var(--muted); margin-top: 3px; }
 
 .situation-demo { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: 26px; background: var(--sky-bg); border-radius: var(--radius-lg); }
-.situation-demo .phone { max-width: 196px; }
+.situation-demo .phone { max-width: 232px; }
 .demo-notes { display: grid; gap: 14px; }
 .demo-notes p { font-size: 14.8px; color: var(--muted); line-height: 1.7; }
 .demo-notes span { display: block; font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; color: var(--blue); margin-bottom: 2px; }
@@ -316,6 +316,7 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
   .hero-visual { order: 2; }
   .phone-pair { padding-left: 0; }
   .phone-pair .phone-back { display: none; }
+  .phone-pair .phone-front { max-width: 268px; }
   .empathy-list, .flow { grid-template-columns: 1fr; gap: 26px; }
   .flow li { flex-direction: column; }
   .situation-layout, .korean-inner, .maker-inner { grid-template-columns: 1fr; }
