@@ -76,8 +76,8 @@
     }, { passive: true });
   }
 
-  /* ── 저서 표지: 이미지 파일이 없으면 자리표시 표지를 그대로 보여준다 ── */
-  Array.prototype.forEach.call(document.querySelectorAll('.book-cover img'), function (img) {
+  /* ── 표지·화면 목업: 이미지 파일이 없으면 자리표시를 그대로 보여준다 ── */
+  Array.prototype.forEach.call(document.querySelectorAll('.book-cover img, .phone-screen img'), function (img) {
     function hide() { img.style.display = 'none'; }
     img.addEventListener('error', hide);
     if (img.complete && img.naturalWidth === 0) hide();

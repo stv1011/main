@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>익힘 외국어 — 여행회화 | 여행에서 필요한 말부터</title>
+<meta name="description" content="여행에서 쓸 언어를 고르고, 필요한 상황의 표현부터 짧게 연습하세요. 일본어·영어·중국어·광동어·한국어·스페인어 등 여러 언어의 여행회화를 무료 베타로 공개 중입니다." />
+<meta name="theme-color" content="#F0F9FF" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="익힘 외국어" />
+<meta property="og:title" content="이번 여행, 내가 먼저 말해보세요 — 익힘 외국어 여행회화" />
+<meta property="og:description" content="배울 언어를 고르고, 필요한 여행 상황의 표현부터 짧게 연습하세요. 현재 무료 베타 공개 중입니다." />
+<meta property="og:image" content="assets/og.jpg" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/favicon.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="assets/logo-192.png" />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+<link rel="stylesheet" href="travel.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+    <a class="brand" href="travel.html" aria-label="익힘 외국어 홈">
+      <img src="assets/logo.png" alt="" width="38" height="38" />
+      <span class="brand-text"><strong>익힘 외국어</strong><em>여행회화</em></span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="주요 메뉴">
+      <a href="#languages">배울 언어</a>
+      <a href="#how">학습 방식</a>
+      <a href="#situations">여행 상황</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- TODO: 언어별 코스 주소가 정해지면 각 링크를 해당 코스로 교체 -->
+      <a class="btn btn-primary btn-sm" href="https://ikhim.app/" target="_blank" rel="noopener">무료로 시작하기</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ───────────────────────── 1. 첫 화면 ───────────────────────── -->
+  <section class="hero" id="top">
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <p class="badge reveal">여행회화 <span class="dot">·</span> 무료 베타 공개 중</p>
+        <h1 class="reveal">이번 여행,<br />내가 먼저 말해보세요.</h1>
+        <p class="hero-lead reveal">
+          주문하고, 길을 묻고, 필요한 것을 부탁하는 순간까지.<br />
+          여행할 곳의 언어를 고르고, 필요한 표현부터 짧게 연습하세요.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#languages">배울 언어 선택하기</a>
+          <a class="btn btn-outline" href="#how">학습 화면 살펴보기</a>
+        </div>
+        <p class="hero-note reveal">여러 언어의 여행회화 <span class="dot">·</span> 설치 없이 웹에서 <span class="dot">·</span> 현재 무료 베타</p>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="phone-pair">
+          <figure class="phone phone-back">
+            <div class="phone-screen" data-screen="언어 선택 화면">
+              <img src="assets/screens/hero-language.png" alt="배울 언어를 고르는 언어 선택 화면" loading="eager" />
+            </div>
+          </figure>
+          <figure class="phone phone-front">
+            <div class="phone-screen" data-screen="표현 학습 화면">
+              <img src="assets/screens/hero-learn.png" alt="여행 상황의 표현과 뜻을 확인하는 학습 화면" loading="eager" />
+            </div>
+          </figure>
+        </div>
+        <p class="hero-flow" aria-hidden="true">언어 선택 <i>→</i> 상황 선택 <i>→</i> 표현 연습</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 2. 언어 선택 ───────────────────────── -->
+  <section class="section languages" id="languages">
+    <div class="shell">
+      <header class="section-head reveal">
+        <h2>어느 언어로<br />여행을 준비할까요?</h2>
+        <p>배우고 싶은 언어를 선택하세요. 현재 무료 베타로 공개된 과정을 바로 경험할 수 있습니다.</p>
+      </header>
+
+      <!-- TODO: 각 카드의 href 를 해당 언어 코스 주소로 교체 -->
+      <ul class="lang-grid">
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>일본어</strong><span lang="ja">日本語</span><em>일본 여행</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>영어</strong><span lang="en">English</span><em>영어권 전반</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>중국어</strong><span lang="zh-Hans">简体中文</span><em>중국 본토 · 간체</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>광동어</strong><span lang="yue">粵語</span><em>홍콩</em><span class="go">과정 보기</span></a></li>
+        <!-- TODO: 대만 과정의 실제 언어 확인 후 '중국어 — 대만·번체' 또는 '대만어 — 민남어'로 확정 -->
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>대만 과정</strong><span class="pending">언어명 확정 예정</span><em>대만</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal is-guide"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>한국어</strong><span lang="ko">한국어</span><em>한국 여행</em>
+          <span class="guide-note">영어 · 일본어 · 중국어권 학습자를 위한 안내 지원</span><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>스페인어</strong><span lang="es">Español</span><em>스페인 · 중남미</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>독일어</strong><span lang="de">Deutsch</span><em>독일어권</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>프랑스어</strong><span lang="fr">Français</span><em>프랑스어권</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>태국어</strong><span lang="th">ภาษาไทย</span><em>태국</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>베트남어</strong><span lang="vi">Tiếng Việt</span><em>베트남</em><span class="go">과정 보기</span></a></li>
+        <li class="reveal"><a href="https://ikhim.app/" target="_blank" rel="noopener">
+          <strong>아랍어</strong><span lang="ar" dir="rtl">العربية</span><em>아랍어권</em><span class="go">과정 보기</span></a></li>
+      </ul>
+
+      <p class="lang-note reveal">언어별로 공개된 회차와 제공 기능이 다를 수 있습니다. 각 과정 화면에서 현재 이용 가능한 내용을 확인하실 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 3. 공감 ───────────────────────── -->
+  <section class="section empathy">
+    <div class="shell">
+      <header class="section-head reveal">
+        <h2>하고 싶은 말은 있는데,<br />막상 그 순간에는 망설여지나요?</h2>
+      </header>
+      <ul class="empathy-list">
+        <li class="reveal">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 10.2A2 2 0 0 1 16.8 20H7.2a2 2 0 0 1-2-1.8L4 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+          <div><strong>주문할 때마다 표현을 다시 검색한다</strong>
+          <p>메뉴는 골랐는데, 수량이나 요청 사항을 어떻게 말해야 할지 찾게 됩니다.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-7-10a7 7 0 1 1 14 0c0 5.4-7 10-7 10z"/><circle cx="12" cy="11" r="2.6"/></svg></span>
+          <div><strong>무엇부터 공부할지 정하기 어렵다</strong>
+          <p>문법부터 시작하기에는 부담스럽고, 여행 표현을 모두 외우자니 범위가 넓습니다.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H5l-1.5 2v-6.5A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14.5h3.5"/></svg></span>
+          <div><strong>읽으면 알겠는데 말하려면 떠오르지 않는다</strong>
+          <p>눈으로 익힌 표현을 실제 상황에서 꺼내려면 직접 연습할 기회가 필요합니다.</p></div>
+        </li>
+      </ul>
+      <p class="empathy-close reveal">익힘에서는 내가 겪을 여행 장면을 고르고,<br /><strong>그 순간에 필요한 말부터</strong> 준비합니다.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 4. 학습 방식 ───────────────────────── -->
+  <section class="section how" id="how">
+    <div class="shell">
+      <header class="section-head reveal">
+        <h2>언어를 고르고,<br />필요한 장면부터 시작하세요.</h2>
+      </header>
+
+      <ol class="flow">
+        <li class="reveal">
+          <figure class="phone">
+            <div class="phone-screen" data-screen="언어 선택 화면">
+              <img src="assets/screens/flow-language.png" alt="배울 언어를 선택하는 화면" loading="lazy" />
+            </div>
+          </figure>
+          <span class="step-num">01</span>
+          <h3>배울 언어를 고릅니다</h3>
+          <p>이번 여행에서 사용하고 싶은 언어를 선택합니다.</p>
+        </li>
+        <li class="reveal">
+          <figure class="phone">
+            <div class="phone-screen" data-screen="상황 · 회차 목록 화면">
+              <img src="assets/screens/flow-situations.png" alt="선택한 언어의 여행 상황과 회차 목록 화면" loading="lazy" />
+            </div>
+          </figure>
+          <span class="step-num">02</span>
+          <h3>필요한 상황을 찾습니다</h3>
+          <p>공개된 코스에서 먼저 배우고 싶은 여행 장면을 고릅니다.</p>
+        </li>
+        <li class="reveal">
+          <figure class="phone">
+            <div class="phone-screen" data-screen="표현 학습 화면">
+              <img src="assets/screens/flow-expression.png" alt="표현과 뜻을 확인하며 연습하는 학습 화면" loading="lazy" />
+            </div>
+          </figure>
+          <span class="step-num">03</span>
+          <h3>표현을 확인하고 연습합니다</h3>
+          <p>뜻과 제공되는 학습 안내를 참고해, 필요한 표현을 직접 말해봅니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 5. 여행 상황 ───────────────────────── -->
+  <section class="section situations" id="situations">
+    <div class="shell">
+      <header class="section-head reveal">
+        <h2>내 여행에 필요한 장면부터.</h2>
+        <p>전체를 한꺼번에 공부하지 않아도 괜찮습니다. 곧 사용할 상황의 표현부터 살펴보세요.</p>
+      </header>
+
+      <div class="situation-layout">
+        <ul class="situation-list">
+          <li class="reveal"><strong>공항 · 이동</strong><p>필요한 정보를 묻고 목적지 확인하기</p></li>
+          <li class="reveal"><strong>숙소</strong><p>체크인과 필요한 사항 요청하기</p></li>
+          <li class="reveal"><strong>식당 · 카페</strong><p>메뉴 · 수량을 말하며 주문하기</p></li>
+          <li class="reveal"><strong>쇼핑</strong><p>원하는 상품과 조건 확인하기</p></li>
+          <li class="reveal"><strong>길 찾기</strong><p>장소와 이동 방향 묻기</p></li>
+        </ul>
+
+        <div class="situation-demo reveal">
+          <figure class="phone">
+            <div class="phone-screen" data-screen="상황별 학습 화면">
+              <img src="assets/screens/situation-example.png" alt="선택한 여행 상황의 표현을 학습하는 화면" loading="lazy" />
+            </div>
+          </figure>
+          <div class="demo-notes">
+            <p><span>어떤 상황</span>곧 마주할 여행 장면을 하나 고릅니다.</p>
+            <p><span>무엇을 연습</span>그 자리에서 바로 쓸 표현을 말해봅니다.</p>
+            <p><span>어디서 확인</span>표현과 뜻을 한 화면에서 함께 봅니다.</p>
+            <a class="btn btn-primary" href="https://ikhim.app/" target="_blank" rel="noopener">이 상황 학습하기</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="lang-note reveal">위 분류는 안내를 위한 예시이며, 실제 제공 중인 상황은 언어별 과정 화면에서 확인하실 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 6. 한국어 과정 ───────────────────────── -->
+  <section class="section korean">
+    <div class="shell korean-inner">
+      <div class="korean-copy">
+        <h2 class="reveal">한국 여행을 준비하는 분도<br />함께 시작할 수 있습니다.</h2>
+        <p class="reveal">
+          한국어 과정은 <strong>영어 · 일본어 · 중국어권 학습자를 위한 안내</strong>를 제공합니다.
+          익숙한 언어의 설명을 참고하며 한국 여행에서 사용할 표현을 배워보세요.
+        </p>
+        <dl class="korean-split reveal">
+          <div><dt>배우는 언어</dt><dd>한국어</dd></div>
+          <div><dt>설명을 읽는 언어</dt><dd><span lang="en">English</span> · <span lang="ja">日本語</span> · <span lang="zh">中文</span></dd></div>
+        </dl>
+        <p class="korean-caution reveal">
+          안내 언어 지원 범위는 과정마다 다릅니다. 다른 외국어 과정이 모두 같은 안내 언어를 제공하는 것은 아니며,
+          이 랜딩 페이지 자체는 현재 한국어로만 제공됩니다.
+        </p>
+      </div>
+      <div class="korean-visual reveal">
+        <figure class="phone">
+          <div class="phone-screen" data-screen="한국어 과정 학습 화면">
+            <img src="assets/screens/korean-course.png" alt="안내 언어를 선택해 한국어 표현을 배우는 화면" loading="lazy" />
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 7. 무료 베타 ───────────────────────── -->
+  <section class="section beta">
+    <div class="shell">
+      <div class="beta-panel reveal">
+        <div class="beta-copy">
+          <h2>지금은 무료 베타.<br />직접 경험하고 의견을 들려주세요.</h2>
+          <p>현재 공개된 여행회화 과정을 무료로 이용할 수 있습니다.
+          실제로 사용해보며 느낀 표현의 난이도, 설명의 이해도, 화면의 편의성을 알려주세요.</p>
+        </div>
+        <ul class="beta-list">
+          <li>베타 기간 결제 없음</li>
+          <li>설치 없이 웹에서 이용</li>
+          <li>공개된 언어별 과정 체험</li>
+          <li>의견을 반영해 콘텐츠와 기능 개선</li>
+        </ul>
+        <!-- TODO: 실제 설문·문의 경로가 준비되면 '의견 보내기' 보조 버튼을 이 아래에 추가 -->
+        <a class="btn btn-primary btn-lg" href="https://ikhim.app/" target="_blank" rel="noopener">무료로 체험하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 8. 콘텐츠 설계 ───────────────────────── -->
+  <section class="section maker">
+    <div class="shell maker-inner">
+      <div class="maker-photo reveal">
+        <picture>
+          <source srcset="assets/shota.webp" type="image/webp" />
+          <img src="assets/shota.jpg" alt="익힘을 기획하고 일본어 콘텐츠를 만드는 쇼타쌤" width="1000" height="1339" loading="lazy" />
+        </picture>
+      </div>
+      <div class="maker-copy">
+        <p class="eyebrow reveal">익힘을 만드는 사람</p>
+        <h2 class="reveal">필요한 말을 배우고,<br />직접 써보는 경험을 만듭니다.</h2>
+        <p class="reveal">
+          익힘은 짧은 학습을 실제 활용으로 이어가기 위해 만들어졌습니다.
+          일본어 교육과 교재 집필 경험을 출발점으로, 여러 언어의 여행회화로 학습 범위를 넓혀가고 있습니다.
+        </p>
+        <p class="maker-name reveal"><strong>쇼타쌤</strong> <span>익힘 기획 / 일본어 콘텐츠</span></p>
+        <ul class="maker-career">
+          <li class="reveal">JLPT 교재 집필</li>
+          <li class="reveal">EBS 일본어 방송 출연</li>
+          <li class="reveal">대학 및 온라인 일본어 강의</li>
+        </ul>
+        <a class="text-link reveal" href="index.html">익힘 일본어 러닝루프 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 9. FAQ ───────────────────────── -->
+  <section class="section faq" id="faq">
+    <div class="shell shell-narrow">
+      <header class="section-head reveal">
+        <h2>자주 묻는 질문</h2>
+      </header>
+      <div class="faq-list" id="faqList">
+        <details class="faq-item reveal">
+          <summary>어떤 언어를 배울 수 있나요?</summary>
+          <div class="faq-body"><p>일본어, 영어, 중국 본토 간체 중국어, 홍콩 광동어, 대만 과정, 한국어, 스페인어, 독일어, 프랑스어, 태국어, 베트남어, 아랍어 과정이 세팅되어 있습니다. 현재 공개된 구성은 각 언어의 코스 화면에서 확인할 수 있습니다.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>지금 무료로 사용할 수 있나요?</summary>
+          <div class="faq-body"><p>네. 현재 무료 베타로 공개되어 있으며, 베타 기간에는 결제가 없습니다.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>외국어를 처음 배우는데 이용할 수 있나요?</summary>
+          <div class="faq-body"><p>여행 상황에서 필요한 표현부터 시작할 수 있도록 구성했습니다. 발음 표기와 설명 등 제공되는 학습 안내는 언어별 코스에서 확인해주세요.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>모든 언어의 학습 분량과 기능이 같나요?</summary>
+          <div class="faq-body"><p>언어별로 공개된 회차와 제공 기능이 다를 수 있습니다. 각 과정에서 현재 이용 가능한 내용을 안내합니다.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>한국어 과정의 설명은 어떤 언어로 볼 수 있나요?</summary>
+          <div class="faq-body"><p>영어 · 일본어 · 중국어권 학습자를 위한 안내를 지원합니다.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>앱을 설치해야 하나요?</summary>
+          <div class="faq-body"><p>별도 설치 없이 웹 브라우저에서 이용할 수 있습니다.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>다른 기기에서도 학습 기록이 이어지나요?</summary>
+          <div class="faq-body"><p>현재 베타는 기기 · 브라우저 내 기록 저장을 기준으로 운영하며, 계정 기반 자동 동기화는 제공하지 않습니다. 브라우저 데이터 삭제 시 기록이 사라질 수 있습니다.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 10. 마지막 체험 유도 ───────────────────────── -->
+  <section class="closing">
+    <div class="shell reveal">
+      <h2>다음 여행의 첫마디,<br />지금 준비해보세요.</h2>
+      <p>주문 한 번, 질문 한마디부터. 내가 쓸 언어와 상황을 골라 시작하세요.</p>
+      <a class="btn btn-primary btn-lg" href="#languages">배울 언어 선택하기</a>
+      <p class="closing-note">익힘 외국어 <span class="dot">·</span> 여행회화 무료 베타</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="익힘 로고" width="40" height="40" loading="lazy" />
+      <p><strong>익힘 외국어</strong>는 여행에서 필요한 말부터 짧게 배우고 직접 말해보는 여행회화 서비스입니다. 현재 무료 베타로 공개 중입니다.</p>
+    </div>
+    <nav class="footer-links" aria-label="푸터 메뉴">
+      <a href="#languages">배울 언어</a>
+      <a href="#how">학습 방식</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="index.html">익힘 일본어</a>
+      <a href="https://ikhim.app/" target="_blank" rel="noopener">무료로 시작하기</a>
+    </nav>
+    <p class="footer-legal">
+      <!-- TODO: 실제 문의 이메일로 교체하세요 -->
+      문의 <a href="mailto:hello@example.com">hello@example.com</a>
+      <span class="sep">|</span> © 2026 익힘 (Ikhim). All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <div class="mobile-cta-text"><strong>여행회화 무료 베타</strong><span>설치 없이 웹에서</span></div>
+  <a class="btn btn-primary" href="#languages">언어 선택</a>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
