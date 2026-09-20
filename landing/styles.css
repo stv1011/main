@@ -191,7 +191,30 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .hero-note { margin-top: 20px; font-size: 14px; color: rgba(244, 245, 241, 0.62); }
 
-.hero-visual { display: flex; justify-content: center; align-self: end; padding-bottom: 8px; }
+.hero-visual { position: relative; align-self: end; }
+.hero-photo { position: relative; max-width: 460px; margin: 0 0 0 auto; }
+.hero-photo img {
+  width: 100%; filter: grayscale(1) contrast(1.08) brightness(0.96);
+  -webkit-mask-image: radial-gradient(50% 62% at 52% 42%, #000 38%, rgba(0, 0, 0, 0.5) 70%, transparent 97%);
+  mask-image: radial-gradient(50% 62% at 52% 42%, #000 38%, rgba(0, 0, 0, 0.5) 70%, transparent 97%);
+  mix-blend-mode: luminosity;
+}
+.float-card {
+  position: absolute; margin: 0; padding: 13px 18px; border-radius: 14px;
+  background: rgba(246, 245, 240, 0.56); color: var(--ink);
+  -webkit-backdrop-filter: saturate(160%) blur(13px); backdrop-filter: saturate(160%) blur(13px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: var(--shadow-lg); display: flex; flex-direction: column; line-height: 1.35;
+  max-width: 218px; animation: floaty 6s ease-in-out infinite;
+}
+.float-card strong { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; }
+.float-card span { font-size: 12px; color: var(--terra-text); font-weight: 700; }
+.float-card-a { left: -6px; top: 22%; }
+.float-card-b { right: -4px; bottom: 30%; animation-delay: 1.6s; }
+.float-card-c { left: 2px; bottom: 9%; animation-delay: 3.1s; }
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+.course-visual { display: flex; flex-direction: column; align-items: center; margin-top: 46px; }
 
 /* ── 손글씨 ─────────────────────────────────────────── */
 .script { font-family: var(--font-script); font-weight: 700; letter-spacing: 0.005em; }
@@ -498,6 +521,11 @@ ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 
   .hero-inner { grid-template-columns: 1fr; gap: 6px; }
   .hero-copy { padding-bottom: 8px; }
+  .hero-photo { max-width: 300px; margin: 0 auto; }
+  .hero-visual { margin-top: 8px; }
+  .float-card-a { left: 0; top: 10%; }
+  .float-card-b { right: 0; bottom: 34%; }
+  .float-card-c { left: 0; bottom: 6%; max-width: 186px; }
 
   .cards-3, .road, .plans { grid-template-columns: 1fr; }
   .loop-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1050,4 +1078,7 @@ a.book-cover { text-decoration: none; }
   .course-grid { grid-template-columns: 1fr; }
   .beta-main { padding: 28px 24px; }
   .final-cta-row .btn { flex: 1 1 100%; }
+  .float-card { padding: 9px 13px; }
+  .float-card-a { left: -6px; top: 12%; }
+  .float-card-b { right: -6px; bottom: 30%; }
 }
