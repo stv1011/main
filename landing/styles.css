@@ -950,6 +950,15 @@ a.book-cover { text-decoration: none; }
 .phone-pair .phone-front { max-width: 252px; position: relative; z-index: 2; }
 
 .mock-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 54px; }
+.mock-row-4 { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.mock-row-4 .phone { max-width: 208px; }
+.record-visual { display: flex; flex-direction: column; align-items: center; margin-top: 46px; }
+.mock-caption em { font-style: normal; color: var(--text-muted); opacity: 0.8; }
+.connect-pending {
+  margin-top: 34px; padding: 24px 28px; background: var(--paper-2); border-radius: var(--radius);
+  font-size: 15.4px; line-height: 1.85; color: var(--text-muted);
+}
+.connect-pending strong { color: var(--terra-text); }
 .mock { margin: 0; display: flex; flex-direction: column; align-items: center; }
 .mock .phone { max-width: 236px; }
 .mock figcaption { margin-top: 16px; font-size: 14.6px; font-weight: 700; color: var(--text-muted); text-align: center; }
@@ -1029,7 +1038,8 @@ a.book-cover { text-decoration: none; }
   .hero-visual { padding-top: 6px; }
   .phone-pair .phone-back { max-width: 152px; margin-right: -36px; }
   .phone-pair .phone-front { max-width: 186px; }
-  .mock-row { grid-template-columns: 1fr; gap: 34px; margin-top: 40px; }
+  .mock-row, .mock-row-4 { grid-template-columns: 1fr; gap: 34px; margin-top: 40px; }
+  .mock-row-4 .phone { max-width: 248px; }
   .news-grid { grid-template-columns: 1fr; }
   .record-grid, .beta-card { grid-template-columns: 1fr; }
   .course-grid { grid-template-columns: repeat(2, 1fr); }

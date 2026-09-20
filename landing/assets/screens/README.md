@@ -15,20 +15,27 @@
 | `travel-quiz.jpg` | 여행 상황 | 공항 회차 상황 퀴즈 |
 | `travel-korean.jpg` | 한국어 과정 | 일본어 안내의 한국어 과정 |
 
-## 익힘 러닝루프 일본어 (`index.html`) — 화면 필요
+## 익힘 러닝루프 일본어 (`index.html`) — 적용 완료
+
+| 파일명 | 들어가는 위치 | 화면 |
+| --- | --- | --- |
+| `jp-today.jpg` | 첫 화면 · 앞쪽 | 오늘의 레슨 (단계별 진행) |
+| `jp-course-list.jpg` | 첫 화면 · 뒤쪽 | JLPT 과정의 모듈 · 레슨 목록 |
+| `jp-video.jpg` | 러닝루프 ① | 이해 · 핵심 영상 (챕터 · 중간 확인) |
+| `jp-quiz-correct.jpg` | 러닝루프 ② | 적용 · 채점과 해설 |
+| `jp-worksheet.jpg` | 러닝루프 ③ | 출력 · 학습지 |
+| `jp-review.jpg` | 러닝루프 ④ | 복습 · 오답 노트 |
+| `jp-quiz-wrong.jpg` | 채점과 기록 · 뒤쪽 | 오답과 오답 노트 저장 |
+| `jp-result.jpg` | 채점과 기록 · 앞쪽 | 판별 결과 · 자동 복습 일정 |
+
+### 아직 필요한 화면
 
 | 파일명 | 들어가는 위치 | 필요한 화면 |
 | --- | --- | --- |
-| `jp-hero-main.png` | 첫 화면 · 앞쪽 | 대표 학습 화면 (뉴스 또는 문법) |
-| `jp-hero-result.png` | 첫 화면 · 뒤쪽 | 채점 결과 또는 복습 |
-| `jp-loop-explain.png` | 러닝루프 ① | 개념 또는 뉴스 표현 설명 |
-| `jp-loop-grade.png` | 러닝루프 ② | 응답 제출 후 채점 · 해설 |
-| `jp-loop-review.png` | 러닝루프 ③ | 복습 문제 |
 | `jp-news-basic.png` | 뉴스 · 앞쪽 | 뉴스 기본 학습 + 공통 확인 문제 |
 | `jp-news-member.png` | 뉴스 · 뒤쪽 | 멤버 심화 과제 |
-| `jp-connect-news.png` | 코스 연결 ① | 뉴스 속 핵심 표현 |
-| `jp-connect-grammar.png` | 코스 연결 ② | 연결된 단어 또는 문법 설명 |
-| `jp-connect-review.png` | 코스 연결 ③ | 새 문장 복습 문제 |
+
+코스 연결 섹션은 기능 배포 전이라 목업 대신 '업데이트 준비 중' 안내를 두었습니다.
 
 ## 규격과 처리
 
